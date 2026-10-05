@@ -28,7 +28,7 @@ for lab, R in CASES.items():
     d = delta_for_power(F0, M0, P_TARGET, R, R)
     nominal[lab] = (R, d, v1_rms(VDC, d))
 
-# ------------------------------------------------ A: air-gap sweep (open loop, inverter command fixed)
+# A: air-gap sweep (open loop, inverter command fixed)
 gaps = [0.10, 0.125, 0.15, 0.175, 0.20, 0.25]
 rowsA = []
 for lab, (R, d, V1) in nominal.items():
@@ -38,7 +38,7 @@ for lab, (R, d, V1) in nominal.items():
                           Pout_W=r["P"], I1_A=r["I1"], I2_A=r["I2"], Pin_W=r["Pin"], eff_pct=r["eff"] * 100))
 save_csv("A_air_gap_sweep", rowsA)
 
-# ------------------------------------------------ B: lateral misalignment sweep at 15 cm gap
+# B: lateral misalignment sweep at 15 cm gap
 lats = [0, 0.02, 0.04, 0.06, 0.08, 0.10, 0.12]
 rowsB = []
 for lab, (R, d, V1) in nominal.items():
@@ -48,7 +48,7 @@ for lab, (R, d, V1) in nominal.items():
                           I1_A=r["I1"], I2_A=r["I2"], eff_pct=r["eff"] * 100))
 save_csv("B_misalignment_sweep", rowsB)
 
-# ------------------------------------------------ C: frequency sweep (open loop, nominal coupling)
+# C: frequency sweep (open loop, nominal coupling)
 fgrid = np.arange(20e3, 40e3 + 1, 250)
 rowsC = []
 for lab, (R, d, V1) in nominal.items():
@@ -58,7 +58,7 @@ for lab, (R, d, V1) in nominal.items():
                           eff_pct=r["eff"] * 100 if r["P"] > 0 else 0.0, conducting=int(r["conducting"])))
 save_csv("C_frequency_sweep", rowsC)
 
-# ------------------------------------------------ D: compensation topologies (R = 0.81, same coils, same battery)
+# D: compensation topologies (R = 0.81, same coils, same battery)
 R = 0.81
 w0 = 2 * np.pi * F0
 design = {}
@@ -96,7 +96,7 @@ for topo, p in design.items():
                           I1_coil_A=r["I1"], I_source_A=r["Iin"], I2_A=r["I2"], input_phase_deg=r["phi_in"]))
 save_csv("D_topology_nominal", rowsDn); save_csv("D_topology_gap_sweep", rowsD)
 
-# ------------------------------------------------ E: closed-loop power regulation (phase-shift PI)
+# E: closed-loop power regulation (phase-shift PI)
 R = 0.81
 dnom = nominal[list(CASES)[0]][1]
 def plant(delta, M): return solve_ss(F0, M, v1_rms(VDC, delta), R, R)
@@ -137,7 +137,7 @@ import control_tuning as CT
 # regulation range: M range where P = target is reachable at the DC bus limit
 Mreach = lambda: brentq(lambda M: solve_ss(F0, M, v1_rms(VDC, np.pi), R, R)["P"] - P_TARGET, 20e-6, 160e-6)
 
-# ------------------------------------------------ figures
+# figures
 def label_last(ax, x, y, text, color):
     ax.annotate(text, (x[-1], y[-1]), xytext=(4, 0), textcoords="offset points", color="#333", fontsize=8, va="center")
 
@@ -186,7 +186,7 @@ for (name, (op, cl)), tag in zip(E.items(), ("E1", "E2")):
     ax[1].axhline(P_TARGET, color="#888", ls="--", lw=1); ax[1].legend(frameon=False, fontsize=8)
     fig.suptitle(name + "  (quasi-static FHA plant, R = 0.81 ohm)", y=1.02); fig.tight_layout(); fig.savefig(f"{OUT}/{tag}_control.png", bbox_inches="tight"); plt.close(fig)
 
-# ------------------------------------------------ console summary
+# console summary
 print(f"coil-pair surrogate: loop radius {R_LOOP*100:.1f} cm, bundle radius {A_BUNDLE*100:.0f} mm; rated power is reachable at full DC-bus drive only up to M = {Mreach()*1e6:.1f} uH (k <= {Mreach()/LAV:.3f}); tighter coupling needs more bus voltage")
 for lab, (Rr, d, V1) in nominal.items(): print(f"nominal [{lab}]: delta={np.degrees(d):.1f} deg  V1={V1:.1f} V")
 def show(rows, cols):
