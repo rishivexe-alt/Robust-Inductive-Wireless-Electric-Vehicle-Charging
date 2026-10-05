@@ -8,7 +8,6 @@ All quantities RMS phasors at the fundamental. Battery = constant-voltage sink (
 import numpy as np
 from scipy.optimize import brentq
 
-# ---- parameters taken from the repo (simulation_parameters.m / Design_Parameters.md) ----
 Lp, Cp = 266.16e-6, 105.74e-9
 Ls, Cs = 256.79e-6, 109.69e-9
 M0 = 85.46e-6
@@ -40,7 +39,7 @@ def solve_ss(f, M, V1, Rp=1e-3, Rs=1e-3, Cp_=Cp, Cs_=Cs, vbat=VBAT):
     def i2_given(x):
         Req = V2 / x
         Zs = Zs0 + Req
-        I2 = (jwM * V1 / Zp) / (Zs + (w * M) ** 2 / Zp)   # |.| only; phase relative to V1
+        I2 = (jwM * V1 / Zp) / (Zs + (w * M) ** 2 / Zp)   
         return I2
 
     def resid(x):
@@ -57,7 +56,7 @@ def solve_ss(f, M, V1, Rp=1e-3, Rs=1e-3, Cp_=Cp, Cs_=Cs, vbat=VBAT):
     Req = V2 / x
     Zs = Zs0 + Req
     I2 = i2_given(x)
-    I1 = (V1 - jwM * I2 * 0) / Zp                       # placeholder, recomputed below
+    I1 = (V1 - jwM * I2 * 0) / Zp                       
     # Exact loop equations:  V1 = Zp*I1 + jwM*I2 ;  0 = Zs*I2 + jwM*I1  ->  I1 = -Zs*I2/jwM
     I1 = -Zs * I2 / jwM if abs(jwM) > 0 else 0
     return _pack(I1, I2, x, V1, Rp, Rs, vbat, f)
@@ -82,7 +81,6 @@ def delta_for_power(f, M, P_des, Rp, Rs, vdc=VDC, **kw):
     except ValueError:
         return np.nan
 
-# ---- coil-pair geometry surrogate (Neumann integral, equal coaxial/offset circular filament loops) ----
 MU0 = 4e-7 * np.pi
 def neumann_M(R, gap, lateral=0.0, n=360):
     th = np.linspace(0, 2 * np.pi, n, endpoint=False)
