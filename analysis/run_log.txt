@@ -1,0 +1,100 @@
+coil-pair surrogate: loop radius 31.6 cm, bundle radius 2 mm; rated power is reachable at full DC-bus drive only up to M = 101.7 uH (k <= 0.389); tighter coupling needs more bus voltage
+nominal [R = 0.81 ohm per coil (repo loss budget)]: delta=116.9 deg  V1=383.6 V
+nominal [R = 0.10 ohm per coil (assumed low-loss Litz)]: delta=109.3 deg  V1=367.2 V
+
+A R = 0.81 ohm per coil (repo loss budget)
+     gap_cm |           k |        M_uH |      Pout_W |      Iout_A |        I1_A |        I2_A |     eff_pct
+      10.00 |        0.45 |      118.20 |     5836.07 |       14.96 |       16.36 |       16.62 |       92.61
+      12.50 |        0.38 |       99.83 |     6862.40 |       17.60 |       19.49 |       19.54 |       91.39
+      15.00 |        0.33 |       85.46 |     7956.00 |       20.40 |       22.93 |       22.66 |       90.08
+      17.50 |        0.28 |       73.87 |     9126.89 |       23.40 |       26.72 |       25.99 |       88.67
+      20.00 |        0.25 |       64.33 |    10381.76 |       26.62 |       30.92 |       29.57 |       87.16
+      25.00 |        0.19 |       49.63 |    13157.71 |       33.74 |       40.77 |       37.47 |       83.80
+
+A R = 0.10 ohm per coil (assumed low-loss Litz)
+     gap_cm |           k |        M_uH |      Pout_W |      Iout_A |        I1_A |        I2_A |     eff_pct
+      10.00 |        0.45 |      118.20 |     5761.81 |       14.77 |       15.83 |       16.41 |       98.69
+      12.50 |        0.38 |       99.83 |     6816.40 |       17.48 |       18.76 |       19.41 |       98.52
+      15.00 |        0.33 |       85.46 |     7956.00 |       20.40 |       21.93 |       22.66 |       98.34
+      17.50 |        0.28 |       73.87 |     9195.59 |       23.58 |       25.40 |       26.19 |       98.15
+      20.00 |        0.25 |       64.33 |    10548.19 |       27.05 |       29.19 |       30.04 |       97.94
+      25.00 |        0.19 |       49.63 |    13639.91 |       34.97 |       37.94 |       38.85 |       97.45
+
+B R = 0.81 ohm per coil (repo loss budget)
+ lateral_mm |           k |        M_uH |      Pout_W |      Iout_A |        I1_A |     eff_pct
+       0.00 |        0.33 |       85.46 |     7956.00 |       20.40 |       22.93 |       90.08
+      20.00 |        0.33 |       85.02 |     7994.68 |       20.50 |       23.05 |       90.03
+      40.00 |        0.32 |       83.74 |     8110.11 |       20.80 |       23.42 |       89.89
+      60.00 |        0.31 |       81.71 |     8300.67 |       21.28 |       24.03 |       89.66
+      80.00 |        0.30 |       79.04 |     8564.53 |       21.96 |       24.88 |       89.35
+     100.00 |        0.29 |       75.87 |     8900.45 |       22.82 |       25.98 |       88.95
+     120.00 |        0.28 |       72.33 |     9308.50 |       23.87 |       27.32 |       88.46
+
+B R = 0.10 ohm per coil (assumed low-loss Litz)
+ lateral_mm |           k |        M_uH |      Pout_W |      Iout_A |        I1_A |     eff_pct
+       0.00 |        0.33 |       85.46 |     7956.00 |       20.40 |       21.93 |       98.34
+      20.00 |        0.33 |       85.02 |     7996.62 |       20.50 |       22.04 |       98.34
+      40.00 |        0.32 |       83.74 |     8117.97 |       20.82 |       22.38 |       98.32
+      60.00 |        0.31 |       81.71 |     8318.74 |       21.33 |       22.94 |       98.29
+      80.00 |        0.30 |       79.04 |     8597.64 |       22.05 |       23.72 |       98.24
+     100.00 |        0.29 |       75.87 |     8954.23 |       22.96 |       24.72 |       98.19
+     120.00 |        0.28 |       72.33 |     9389.76 |       24.08 |       25.94 |       98.12
+
+C R = 0.81 ohm per coil (repo loss budget)
+      f_kHz |      Pout_W |        I1_A |        I2_A |     eff_pct
+      20.00 |        0.00 |        9.17 |        0.00 |        0.00
+      22.50 |        0.00 |       13.10 |        0.00 |        0.00
+      25.00 |        0.00 |       20.83 |        0.00 |        0.00
+      27.50 |    10130.07 |       30.19 |       28.85 |       87.42
+      30.00 |     7956.00 |       22.93 |       22.66 |       90.08
+      32.50 |     8161.76 |       23.60 |       23.24 |       89.83
+      35.00 |    10067.82 |       30.35 |       28.67 |       87.36
+      37.50 |        0.00 |       16.98 |        0.00 |        0.00
+      40.00 |        0.00 |       13.10 |        0.00 |        0.00
+   peak efficiency 90.20% at 31.00 kHz
+
+C R = 0.10 ohm per coil (assumed low-loss Litz)
+      f_kHz |      Pout_W |        I1_A |        I2_A |     eff_pct
+      20.00 |        0.00 |        8.78 |        0.00 |        0.00
+      22.50 |        0.00 |       12.55 |        0.00 |        0.00
+      25.00 |        0.00 |       19.96 |        0.00 |        0.00
+      27.50 |    10675.09 |       29.55 |       30.40 |       97.92
+      30.00 |     7956.00 |       21.93 |       22.66 |       98.34
+      32.50 |     8273.10 |       22.82 |       23.56 |       98.29
+      35.00 |    11878.19 |       32.96 |       33.83 |       97.73
+      37.50 |        0.00 |       16.27 |        0.00 |        0.00
+      40.00 |        0.00 |       12.55 |        0.00 |        0.00
+   peak efficiency 98.36% at 30.75 kHz
+
+D nominal
+   topology |       Cp_nF |       Lf_uH |        V1_V |      Pout_W |     eff_pct |   I1_coil_A |  I_source_A | input_phase_deg
+         SS |      105.74 |        0.00 |      383.58 |     7956.00 |       90.08 |       22.93 |       22.93 |        0.14
+         SP |      118.24 |        0.00 |      178.32 |     7956.00 |       64.93 |       68.46 |       68.46 |       -0.00
+         PS |      174.63 |      305.50 |      450.16 |     7956.00 |       90.08 |       22.93 |       19.54 |       -0.00
+         PP |      164.10 |      595.40 |      450.16 |     7956.00 |       64.97 |       68.46 |       27.12 |       -0.00
+D SS: P range 5836-13158 W, eff 83.8-92.6%, source current max 40.8 A; no-conduction gaps: []
+   P by gap: [5836, 6862, 7956, 9127, 10382, 13158]
+D SP: P range 1675-7956 W, eff 63.9-91.3%, source current max 68.5 A; no-conduction gaps: []
+   P by gap: [1675, 4470, 7956, 6353, 4489, 2749]
+D PS: P range 0-7956 W, eff 0.0-92.5%, source current max 21.5 A; no-conduction gaps: [25]
+   P by gap: [6805, 7524, 7956, 7888, 6918, 0]
+D PP: P range 1810-7991 W, eff 58.7-91.0%, source current max 34.6 A; no-conduction gaps: []
+   P by gap: [1810, 4245, 7956, 7991, 5572, 3262]
+
+ E1: lateral misalignment 0 -> 80 mm -> 0 (15 cm gap)
+  open  : P min/max 7956/8565 W   I1 max 24.9 A   eff min 89.3%   delta range 117-117 deg
+  closed: P min/max 7950/7963 W   I1 max 24.8 A   eff min 89.3%   delta range 105-117 deg
+   t=0.55: k=0.308 open P=8416 closed P=7962 W, closed I1=24.4 A eff=89.5%  delta=108
+   t=0.75: k=0.302 open P=8565 closed P=7956 W, closed I1=24.8 A eff=89.3%  delta=105
+   t=1.25: k=0.323 open P=8046 closed P=7953 W, closed I1=23.2 A eff=90.0%  delta=115
+   t=1.75: k=0.327 open P=7956 closed P=7956 W, closed I1=22.9 A eff=90.1%  delta=117
+
+ E2: air-gap steps 15 -> 20 -> 12.5 -> 15 cm
+  open   step response (peak deviation %, time to stay within +/-2% ms) at t=0.3/0.8/1.3 s: [(np.float64(30.5), 500), (np.float64(27.5), 500), (np.float64(12.8), 5)]
+  closed step response (peak deviation %, time to stay within +/-2% ms) at t=0.3/0.8/1.3 s: [(np.float64(9.1), 9), (np.float64(12.1), 16), (np.float64(7.9), 12)]
+  open  : P min/max 6862/10382 W   I1 max 30.9 A   eff min 87.2%   delta range 117-117 deg
+  closed: P min/max 6995/8682 W   I1 max 30.9 A   eff min 86.9%   delta range 83-159 deg
+   t=0.55: k=0.246 open P=10382 closed P=7956 W, closed I1=30.5 A eff=86.9%  delta=83
+   t=0.75: k=0.246 open P=10382 closed P=7956 W, closed I1=30.5 A eff=86.9%  delta=83
+   t=1.25: k=0.382 open P=6862 closed P=7956 W, closed I1=19.6 A eff=91.3%  delta=159
+   t=1.75: k=0.327 open P=7956 closed P=7956 W, closed I1=22.9 A eff=90.1%  delta=117

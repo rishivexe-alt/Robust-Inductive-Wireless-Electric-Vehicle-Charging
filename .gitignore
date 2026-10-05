@@ -1,0 +1,5 @@
+*.asv
+*.autosave
+*.log
+__pycache__/
+*.pyc
