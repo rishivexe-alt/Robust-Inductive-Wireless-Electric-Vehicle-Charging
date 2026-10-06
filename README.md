@@ -219,9 +219,7 @@ The analysis requires NumPy, SciPy, and Matplotlib. It regenerates the air-gap, 
 - The switching-level model currently uses nearly ideal coil resistance.
 - The equivalent 0.81 ohm coil resistance should be inserted into the switching model for a direct efficiency validation.
 - Real coil geometry should replace the calibrated circular-loop approximation used in the robustness study.
-- Ferrite, shielding, conductor skin effect, proximity effect, thermal behavior, and detailed pad geometry are not yet modeled.
 - The closed-loop study uses a quasi-static fundamental-harmonic plant with a measurement lag and assumes vehicle-side power feedback without communication delay.
-- The controller should ultimately be tested against the full switching model with realistic sensing, sampling, phase-shift limits, and communication delay.
 
 ## Future extension
 
