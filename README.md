@@ -177,7 +177,6 @@ Robust-Inductive-Wireless-Electric-Vehicle-Charging/
 ├── LICENSE
 ├── simulation/
 │   ├── Resonant_Power_Transfer.slx
-│   └── simulation_parameters.m
 ├── design/
 │   └── resonance_calculations.m
 ├── analysis/
