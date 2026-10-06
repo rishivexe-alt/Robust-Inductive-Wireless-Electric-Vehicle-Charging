@@ -200,9 +200,8 @@ Robust-Inductive-Wireless-Electric-Vehicle-Charging/
 
 1. Open MATLAB with Simulink and Simscape Electrical installed.
 2. Open `simulation/Resonant_Power_Transfer.slx`.
-3. Run `simulation/simulation_parameters.m` if the workspace parameters are not already loaded.
-4. Run the model and inspect the captured measurement points.
-5. Use the figures in `figures/waveforms` to compare the major stages of the power-transfer chain.
+3. Run the model and inspect the captured measurement points.
+4. Use the figures in `figures/waveforms` to compare the major stages of the power-transfer chain.
 
 ### Engineering analysis
 
