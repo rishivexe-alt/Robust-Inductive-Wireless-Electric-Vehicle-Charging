@@ -30,18 +30,18 @@ Primary series resonant compensation network
       │
       ▼
 Transmitter coil  ))))))  magnetic air gap  ((((((  Receiver coil
-                                                │
-                                                ▼
-                               Secondary series resonant network
-                                                │
-                                                ▼
-                                      Diode bridge rectifier
-                                                │
-                                                ▼
-                                         direct-current filter stage
-                                                │
-                                                ▼
-                                         Battery model
+                                                         │
+                                                         ▼
+                                          Secondary series resonant network
+                                                         │
+                                                         ▼
+                                              Diode bridge rectifier
+                                                         │
+                                                         ▼
+                                            direct-current filter stage
+                                                         │
+                                                         ▼
+                                                   Battery model
 ```
 
 There is no direct electrical connection between the transmitter and receiver. Energy crosses the air gap through magnetic coupling.
