@@ -78,7 +78,7 @@ The resulting values place both resonant networks very close to the 30 kilohertz
 | Nominal battery-side voltage | approximately 390 volt |
 | Nominal battery-side current | approximately 20.4 ampere |
 | Nominal output power | approximately 7.96 kilowatt |
-| Design efficiency target | 90 percent |
+| Design efficiency target | 90 percentage |
 
 ### 4. Why the loss resistance was studied
 
